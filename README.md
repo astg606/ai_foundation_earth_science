@@ -8,6 +8,8 @@ This vast collection is driven by NASA mission to understand our planet as a uni
 These observations cover all the major disciplines within 
 Earth science — land, atmosphere, ocean, cryosphere, and 
 human dimensions (Ramachandran 2023). 
+The data, largely unlabeled and vast in volume, can offer novel insights into 
+our planet’s systems.
 
 The data is used in forecasting models of the Earth system to make
 them more accurate and reliable.
@@ -38,8 +40,58 @@ AI needs to be included into internal model processes
 for more accurate predictions (with less computational requirements)
 and for accelerating scientific discovery.
 
+## Foundation Models
+
+Bommasani et al. define a foundation model (FM) as 
+“any model that is trained on broad data (generally using self-supervision at scale) 
+that can be adapted (e.g., fine-tuned) to a wide range of downstream tasks” in order to study this phenomenon.
+FMs have enormous potential in advancing Earth and climate sciences.
+They can be used to streamline the processing of Earth's vast data, reduce the 
+complexity of forecastings models while improving the accuracy.
+
+FMs can revolutionize our understanding of the Earth system towards its sustainable management: (Zhu et al. 2024)
+- FMs have the ability to harness the vast, often unlabeled, reservoirs of observations and
+   climate data by means of learning general representations from them.
+   FMs can learn task-agnostic general feature representations from massive amounts of unlabelled data.
+   This capability not only improves our understanding of Earth’s systems, but also accelerates the pace of
+   discovery from the learned general features.
+- FMs are trained through self-supervised learning on large, unlabeled datasets,
+   which can then be fine-tuned with smaller, task-specific datasets,
+   reducing the reliance on extensive labeled data.
+   This efficiency not only accelerates the applications of AI for observations,
+   but also improves their accuracy, robustness and reliability.
+- Earth Science FMs provide a framework through which observation data can directly
+   inform and enhance climate models.
+   This is essential for improving the resolution and prediction accuracy of
+   climate models, and reducing their biases and uncertainty,
+   and thus leads to more effective and sustainable climate change mitigation
+   and adaptation strategies.
+- The complexity and scale of Earth system modeling (ESM) pose challenges to
+   computational capacity and efficiency with general circulation models and
+   numerical weather prediction models.
+   FMs offer scale invariance and efficient feature representations,
+   presenting an opportunity for a unified approach to ESM.
+   FMs show promise in analyzing diverse ESM data modalities,
+   including images and sequences, to facilitate tasks such as physical law discovery. 
+
+![fig_foundationmodel](https://arxiv.org/html/2405.04285v1/x1.png)
+Image Source: https://arxiv.org/html/2405.04285v1
+
+The scheme of an Earth and climate FM. It should be trained on common data modalities, including imagery (radar, optical), non-Euclidean data (point clouds, text), and meteorological data. It should also provide consistency with physical laws. The FM is task-agnostic, exemplified by five possible downstream tasks. Because of the large difference of the characteristics among Earth observation, weather, and climate data, the resulting FM may consists of a pool of expert models, where feedback loops exist among each of them. 
+
+
+Foundation models 
+
+Earth Science foundation models 
+
 ## Reference
-- Rahul Ramachandran, [AI Foundation Models to Augment Scientific Data and the Research Lifecycle](https://www.earthdata.nasa.gov/news/blog/ai-foundation-models-augment-scientific-data-research-lifecycle), earthdata.nasa.gov, 2023.
+- Bommasani, R., Hudson, D.A., Adeli, E., Altman, R., Arora, S., Arx, S.,
+   Bernstein, M.S., Bohg, J., Bosselut, A., Brunskill, E., et al.
+   On the opportunities and risks of foundation models. arXiv preprint arXiv:2108.07258 (2021)
+- Ramachandran R. [AI Foundation Models to Augment Scientific Data and the Research Lifecycle](https://www.earthdata.nasa.gov/news/blog/ai-foundation-models-augment-scientific-data-research-lifecycle), earthdata.nasa.gov, 2023.
+- Zhu X. X., Xiong Z., Wang Y., Stewart A. J. et al. On the Foundations of Earth and Climate Foundation Models.
+   CoRR abs/2405.04285 (2024)
+   [https://doi.org/10.48550/arXiv.2405.04285](https://doi.org/10.48550/arXiv.2405.04285)
 - Bodnar, C., Bruinsma, W.P., Lucic, A. et al. A foundation model for the Earth system.
-   Nature __641__, 1180–1187 (2025).
+   _Nature_ __641__, 1180–1187 (2025).
    [https://doi.org/10.1038/s41586-025-09005-y](https://doi.org/10.1038/s41586-025-09005-y)
