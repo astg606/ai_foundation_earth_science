@@ -44,10 +44,19 @@ and for accelerating scientific discovery.
 
 Bommasani et al. define a foundation model (FM) as 
 “any model that is trained on broad data (generally using self-supervision at scale) 
-that can be adapted (e.g., fine-tuned) to a wide range of downstream tasks” in order to study this phenomenon.
-FMs have enormous potential in advancing Earth and climate sciences.
+that can be adapted (e.g., fine-tuned) to a wide range of downstream tasks” in order 
+to study this phenomenon.
+FMs are trained on extensive, diverse, and frequently multimodal datasets, 
+enabling them to generalize effectively across various tasks, regions, and sensors.
+In the context of Earth Science, FMs are often multimodal, having been trained 
+on satellite imagery, radar data, topography, weather, and even text-based reports.
+They are meant to automatically capture complex patterns and inherent features from data.
+They have enormous potential in advancing Earth and climate sciences.
 They can be used to streamline the processing of Earth's vast data, reduce the 
-complexity of forecastings models while improving their accuracy and efficiency.
+complexity of forecastings models while improving their prediction accuracy and 
+computational efficiency.
+FMs can uncover intricate patterns in weather systems and provide more 
+reliable predictions across different time scales.
 
 FMs can revolutionize our understanding of the Earth system towards its 
 sustainable management: (Zhu et al., 2024)
@@ -107,8 +116,37 @@ obersvations and numerical model results for training,
 while numerical models can use AI models to skip
 some computation-expensive steps.
 
+## Evaluating FMs
 
-## Python tools
+
+[PANGAEA: A Global and Inclusive Benchmark for Geospatial Foundation Models](https://github.com/VMarsocci/pangaea-bench)
+
+Propose a standardized evaluation protocol that incorporates a wide-ranging selection of datasets, tasks, resolutions, and sensor types, establishing a robust and widely applicable benchmark for Geospatial FMs.
+
+
+## Python tools needed to use FMs
+
+__PyTorch/TensorFlow__
+
+These frameworks are essential for building, training, and deploying custom AI models, 
+including those fine-tuned from foundation models. 
+They offer extensive functionalities for neural networks, optimization, and GPU acceleration.
+
+__Xarray/Dask__
+
+Crucial for handling large, multi-dimensional Earth science datasets 
+(e.g., climate model outputs, remote sensing data) 
+without the requirement of the entire dataset to fit into memory. 
+They provide efficient data structures and parallel computing capabilities, 
+enabling the processing of data for foundation models.
+
+
+## Things to consider
+
+- Effective use of FMs in Earth science necessitates robust tools for handling large,
+   diverse, and often complex geospatial and temporal datasets.
+- Fine-tuning and interpreting FMs for Earth science applications
+    requires significant domain knowledge to ensure scientific validity and meaningful results.
 
 ## Reference
 - Bommasani, R., Hudson, D.A., Adeli, E., Altman, R., Arora, S., Arx, S.,
@@ -124,3 +162,4 @@ some computation-expensive steps.
 - Bodnar, C., Bruinsma, W.P., Lucic, A. et al. A foundation model for the Earth system.
    _Nature_ __641__, 1180–1187 (2025).
    [https://doi.org/10.1038/s41586-025-09005-y](https://doi.org/10.1038/s41586-025-09005-y)
+- [PANGAEA: A Global and Inclusive Benchmark for Geospatial Foundation Models](https://github.com/VMarsocci/pangaea-bench)
