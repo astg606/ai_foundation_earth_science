@@ -7,7 +7,7 @@ NASA has the world’s largest collection of Earth observation data.
 This vast collection is driven by NASA mission to understand our planet as a unified system. 
 These observations cover all the major disciplines within 
 Earth science — land, atmosphere, ocean, cryosphere, and 
-human dimensions (Ramachandran 2023). 
+human dimensions (Ramachandran, 2023). 
 The data, largely unlabeled and vast in volume, can offer novel insights into 
 our planet’s systems.
 
@@ -32,7 +32,7 @@ expertise for effective management.
 Finally, forecasting models incorporate various approximations, 
 such as those for sub-grid-scale processes, limiting accuracy. 
 These challenges open the door for alternative approaches that may 
-offer enhanced performance (Bodnar et al. 2025).
+offer enhanced performance (Bodnar et al., 2025).
 
 AI can play a critical role to address the above issues and 
 to improve the discovery, access, and use of scientific data. 
@@ -49,7 +49,9 @@ FMs have enormous potential in advancing Earth and climate sciences.
 They can be used to streamline the processing of Earth's vast data, reduce the 
 complexity of forecastings models while improving the accuracy.
 
-FMs can revolutionize our understanding of the Earth system towards its sustainable management: (Zhu et al. 2024)
+FMs can revolutionize our understanding of the Earth system towards its 
+sustainable management: (Zhu et al., 2024)
+
 - FMs have the ability to harness the vast, often unlabeled, reservoirs of observations and
    climate data by means of learning general representations from them.
    FMs can learn task-agnostic general feature representations from massive amounts of unlabelled data.
@@ -77,12 +79,10 @@ FMs can revolutionize our understanding of the Earth system towards its sustaina
 ![fig_foundationmodel](https://arxiv.org/html/2405.04285v1/x1.png)
 Image Source: https://arxiv.org/html/2405.04285v1
 
-The scheme of an Earth and climate FM. It should be trained on common data modalities, including imagery (radar, optical), non-Euclidean data (point clouds, text), and meteorological data. It should also provide consistency with physical laws. The FM is task-agnostic, exemplified by five possible downstream tasks. Because of the large difference of the characteristics among Earth observation, weather, and climate data, the resulting FM may consists of a pool of expert models, where feedback loops exist among each of them. 
+Figure 1: _The scheme of an Earth and climate FM. It should be trained on common data modalities, including imagery (radar, optical), non-Euclidean data (point clouds, text), and meteorological data. It should also provide consistency with physical laws. The FM is task-agnostic, exemplified by five possible downstream tasks. Because of the large difference of the characteristics among Earth observation, weather, and climate data, the resulting FM may consists of a pool of expert models, where feedback loops exist among each of them._ 
 
 
-Foundation models 
-
-Earth Science foundation models 
+## Python tools
 
 ## Reference
 - Bommasani, R., Hudson, D.A., Adeli, E., Altman, R., Arora, S., Arx, S.,
