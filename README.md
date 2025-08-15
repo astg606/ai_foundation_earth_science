@@ -47,7 +47,7 @@ Bommasani et al. define a foundation model (FM) as
 that can be adapted (e.g., fine-tuned) to a wide range of downstream tasks” in order to study this phenomenon.
 FMs have enormous potential in advancing Earth and climate sciences.
 They can be used to streamline the processing of Earth's vast data, reduce the 
-complexity of forecastings models while improving the accuracy.
+complexity of forecastings models while improving their accuracy and efficiency.
 
 FMs can revolutionize our understanding of the Earth system towards its 
 sustainable management: (Zhu et al., 2024)
@@ -81,6 +81,32 @@ Image Source: https://arxiv.org/html/2405.04285v1
 
 Figure 1: _The scheme of an Earth and climate FM. It should be trained on common data modalities, including imagery (radar, optical), non-Euclidean data (point clouds, text), and meteorological data. It should also provide consistency with physical laws. The FM is task-agnostic, exemplified by five possible downstream tasks. Because of the large difference of the characteristics among Earth observation, weather, and climate data, the resulting FM may consists of a pool of expert models, where feedback loops exist among each of them._ 
 
+For the Earth Science research communities, the involvement
+of AI is no doubt a huge transition from the traditional
+physics-informed numeric models to primarily data-driven AI models. 
+Scientists will find the AI prediction less interpretable
+than numeric models as AI directly learned all the
+patterns from the data instead of pre-fixed physics equations.
+However, AI approaches can also strengthen traditional
+process-based models by effectively uncovering previously
+unknown relations between variables or processes (Sun, 2024).
+Scientists need to work in a hybrid environment where 
+numerical models and AI models coexist, and their relationship
+are interdependent.
+
+AI-enhanced physics models, achieved through the creation
+of hybrid physics-AI models involve the incorporation of AI
+models into existing physics models. AI models can
+replace one or more components of a physics-based model
+or predict intermediate quantities that are inadequately 
+represented by physics alone (Sun, 2024).
+
+
+A very possible situation may be that AI models will rely on 
+obersvations and numerical model results for training, 
+while numerical models can use AI models to skip
+some computation-expensive steps.
+
 
 ## Python tools
 
@@ -92,6 +118,9 @@ Figure 1: _The scheme of an Earth and climate FM. It should be trained on common
 - Zhu X. X., Xiong Z., Wang Y., Stewart A. J. et al. On the Foundations of Earth and Climate Foundation Models.
    CoRR abs/2405.04285 (2024)
    [https://doi.org/10.48550/arXiv.2405.04285](https://doi.org/10.48550/arXiv.2405.04285)
+- Sun X., ten Brink T., Carande W. et al., Towards practical artificial intelligence in Earth sciences,
+   _Comput Geosci_ __28__, 1305–1329 (2024).
+   [https://doi.org/10.1007/s10596-024-10317-7](https://doi.org/10.1007/s10596-024-10317-7)
 - Bodnar, C., Bruinsma, W.P., Lucic, A. et al. A foundation model for the Earth system.
    _Nature_ __641__, 1180–1187 (2025).
    [https://doi.org/10.1038/s41586-025-09005-y](https://doi.org/10.1038/s41586-025-09005-y)
