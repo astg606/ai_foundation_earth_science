@@ -121,16 +121,46 @@ some computation-expensive steps.
 
 ## Evaluating FMs
 
-The success of FMs is tied to the quantity of the training data
-the used. 
-They require a large amount of high-quality, unbiased data to operate. 
-The can produce biased or incorrect information due to biases in their
-training data (Hadid, Chakraborty and Busby, 2024).
+The success of FMs is tied to the quantity of the training data they used. 
+They require a large amount of high-quality, unbiased data to operate.
+FMs generalize well with high-quality training data, 
+but they can also magnify biases and inconsistencies present in the data. 
+They can produce biased or incorrect information due to biases in their
+training data.
+All these issues are important to be taken into consideration to 
+effectively capitalize and guarantee the beneficial use FMs (Hadid, Chakraborty and Busby, 2024).
+
+Myren and Parikh, 2025, identify three fundamental evaluation aspects for AI that are
+applicable to FMs:
+
+- __Performance uncertainty__:
+   - _Training uncertainty_: Two identical AI model architectures with identical
+       training approaches exhibit different performances as a result of different
+       initializations and random batching during training.
+   - _Data uncertainty_: The data sample and how data is split data into training,
+       validation, and test partitions have drastic random effects on
+       performance benchmarking.
+- __Learning efficiency__: The relationship between the gain in performance to the
+   additional training data required.
+    It is particularly important to FMs because they are fine-tuned using smaller,
+    targeted datasets for the task at hand, and the FM that best adapts may be preferred.
+- __Overlap in the training and test data__: An overlap between training and test data is
+    an example of data leakage that can lead to overestimation of model performance.
+    To address this, we need to clearly partition the data into train and test sets
+    such that evaluation on the test data reflects model’s performance on truly
+    new (or unseen) data.
+    Ensuring no overlap may be difficult for FMs, because a major component of
+    the "foundation" in FMs is the big data used for pre-training that is often
+    scraped from any available source.
 
 - [PANGAEA: A Global and Inclusive Benchmark for Geospatial Foundation Models](https://github.com/VMarsocci/pangaea-bench) - Propose a standardized evaluation
   protocol that incorporates a wide-ranging selection of datasets, tasks,
   resolutions, and sensor types, establishing a robust and widely applicable
   benchmark for Geospatial FMs.
+- Geospatial Explainable AI (XAI) - Increase the accuracy and transparency of AI models and to
+make their results interpretable. The benchmark contains separate tasks that allows the
+user to test a FM’s properties in the embedding space, and demonstrate whether
+the model has learned spectral, spatial and temporal features (Alemohammad et al., 2025).
 
 
 ## Python tools needed to use FMs
@@ -164,8 +194,8 @@ enabling the processing of data for foundation models.
 - Ramachandran R. [AI Foundation Models to Augment Scientific Data and the Research Lifecycle](https://www.earthdata.nasa.gov/news/blog/ai-foundation-models-augment-scientific-data-research-lifecycle), earthdata.nasa.gov, 2023.
 - Hadid A., Chakraborty T. and Busby D.
    When geoscience meets generative AI and large language models: Foundations, trends, and future challenges,
-  (2024)
-   [ https://doi.org/10.1111/exsy.13654]( https://doi.org/10.1111/exsy.13654)
+  Expert Systems __41__(10) (2024)
+   [https://doi.org/10.1111/exsy.13654]( https://doi.org/10.1111/exsy.13654)
 - Zhu X. X., Xiong Z., Wang Y., Stewart A. J. et al. On the Foundations of Earth and Climate Foundation Models.
    CoRR abs/2405.04285 (2024)
    [https://doi.org/10.48550/arXiv.2405.04285](https://doi.org/10.48550/arXiv.2405.04285)
@@ -176,3 +206,10 @@ enabling the processing of data for foundation models.
    _Nature_ __641__, 1180–1187 (2025).
    [https://doi.org/10.1038/s41586-025-09005-y](https://doi.org/10.1038/s41586-025-09005-y)
 - [PANGAEA: A Global and Inclusive Benchmark for Geospatial Foundation Models](https://github.com/VMarsocci/pangaea-bench)
+- Alemohammad, H., Khallaghi, S., Godwin, D., Balogun, R., Roy, S., and Ramachandran, R.,
+   An Explainable AI (XAI) Benchmark for Geospatial Foundation Models,
+   EGU General Assembly 2025, Vienna, Austria, 27 Apr–2 May 2025, EGU25-3302, (2025)
+  [https://doi.org/10.5194/egusphere-egu25-3302](https://doi.org/10.5194/egusphere-egu25-3302)
+- Myren S. and Parikh Nidhu,
+   Towards Foundation Models: Evaluation of Geoscience Artificial Intelligence with Uncertainty,
+   [https://arxiv.org/html/2501.14809v1](https://arxiv.org/html/2501.14809v1)
