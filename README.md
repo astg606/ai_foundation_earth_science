@@ -4,7 +4,10 @@
 ### Introduction
 
 NASA has the world’s largest collection of Earth observation data. 
-This vast collection is driven by NASA mission to understand our planet as a unified system. 
+More datasets are becoming available with varying resolutions,
+processing levels, accuracy, and formats, among other properties.
+This vast collection is driven by NASA mission to understand our 
+planet as a unified system. 
 These observations cover all the major disciplines within 
 Earth science — land, atmosphere, ocean, cryosphere, and 
 human dimensions (Ramachandran, 2023). 
@@ -118,10 +121,16 @@ some computation-expensive steps.
 
 ## Evaluating FMs
 
+The success of FMs is tied to the quantity of the training data
+the used. 
+They require a large amount of high-quality, unbiased data to operate. 
+The can produce biased or incorrect information due to biases in their
+training data (Hadid, Chakraborty and Busby, 2024).
 
-[PANGAEA: A Global and Inclusive Benchmark for Geospatial Foundation Models](https://github.com/VMarsocci/pangaea-bench)
-
-Propose a standardized evaluation protocol that incorporates a wide-ranging selection of datasets, tasks, resolutions, and sensor types, establishing a robust and widely applicable benchmark for Geospatial FMs.
+- [PANGAEA: A Global and Inclusive Benchmark for Geospatial Foundation Models](https://github.com/VMarsocci/pangaea-bench) - Propose a standardized evaluation
+  protocol that incorporates a wide-ranging selection of datasets, tasks,
+  resolutions, and sensor types, establishing a robust and widely applicable
+  benchmark for Geospatial FMs.
 
 
 ## Python tools needed to use FMs
@@ -153,6 +162,10 @@ enabling the processing of data for foundation models.
    Bernstein, M.S., Bohg, J., Bosselut, A., Brunskill, E., et al.
    On the opportunities and risks of foundation models. arXiv preprint arXiv:2108.07258 (2021)
 - Ramachandran R. [AI Foundation Models to Augment Scientific Data and the Research Lifecycle](https://www.earthdata.nasa.gov/news/blog/ai-foundation-models-augment-scientific-data-research-lifecycle), earthdata.nasa.gov, 2023.
+- Hadid A., Chakraborty T. and Busby D.
+   When geoscience meets generative AI and large language models: Foundations, trends, and future challenges,
+  (2024)
+   [ https://doi.org/10.1111/exsy.13654]( https://doi.org/10.1111/exsy.13654)
 - Zhu X. X., Xiong Z., Wang Y., Stewart A. J. et al. On the Foundations of Earth and Climate Foundation Models.
    CoRR abs/2405.04285 (2024)
    [https://doi.org/10.48550/arXiv.2405.04285](https://doi.org/10.48550/arXiv.2405.04285)
