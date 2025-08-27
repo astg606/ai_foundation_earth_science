@@ -195,18 +195,19 @@ the model has learned spectral, spatial and temporal features (Alemohammad et al
 
 ## Python tools needed to use FMs
 
-__PyTorch/TensorFlow__
+### Frameworks
 
-These frameworks are essential for building, training, and deploying custom AI models, 
-including those fine-tuned from foundation models. 
+- __TensorFlow__: An open-source deep learning framework developed by Google.
+   It's renowned for its flexibility and scalability, making it suitable for many AI applications. 
+- __PyTorch__: An open-source machine learning library known for its dynamic computational graph.
+   The framework is excellent for prototyping and experimentation. 
+ 
 They offer extensive functionalities for neural networks, optimization, and GPU acceleration.
 
-__Xarray/Dask__
+### Reading data
 
-Crucial for handling large, multi-dimensional Earth science datasets 
-(e.g., climate model outputs, remote sensing data) 
-without the requirement of the entire dataset to fit into memory. 
-They provide efficient data structures and parallel computing capabilities, 
+- __Xarray/Dask__: Crucial for handling large, multi-dimensional Earth science datasets 
+(e.g., climate model outputs, remote sensing data) without the requirement of the entire dataset to fit into memory. They provide efficient data structures and parallel computing capabilities, 
 enabling the processing of data for foundation models.
 
 
