@@ -130,6 +130,8 @@ training data.
 All these issues are important to be taken into consideration to 
 effectively capitalize and guarantee the beneficial use FMs (Hadid, Chakraborty and Busby, 2024).
 
+### Evaluation aspects
+
 Myren and Parikh, 2025, identify three fundamental evaluation aspects for AI that are
 applicable to FMs:
 
@@ -153,10 +155,38 @@ applicable to FMs:
     the "foundation" in FMs is the big data used for pre-training that is often
     scraped from any available source.
 
+In addtion to the above considerations, we need to ensure that FMs are scientifically validated and their results are reproducible to support reliable and trustworthy Earth Science research. 
+A possible step towards trustworthyness is to develop explainable AI (models capable of generating decisions that a human could understand and interpret).
+
+
+### Evaluation tools
+
+Highly accurate FMs can still produce results that are biased or 
+difficult to interpret, raising the need for evaluation frameworks that 
+consider robustness, fairness, and explainability.
+We currently do not have rigorous evaluation frameworks of FMs in Earth Science.
+It is therefore difficult to assess FMs suitability for various tasks. 
+There is a need for comprehensive and standardized benchmarks for
+evaluating FMs.
+
+Here are some evaluation tools:
+
 - [PANGAEA: A Global and Inclusive Benchmark for Geospatial Foundation Models](https://github.com/VMarsocci/pangaea-bench) - Propose a standardized evaluation
   protocol that incorporates a wide-ranging selection of datasets, tasks,
   resolutions, and sensor types, establishing a robust and widely applicable
   benchmark for Geospatial FMs.
+- [GEO-Bench](https://proceedings.neurips.cc/paper_files/paper/2023/file/a0644215d9cff6646fa334dfa5d29c5a-Paper-Datasets_and_Benchmarks.pdf) - Propose a benchmark comprised of
+  six classification and six segmentation tasks, which were carefully curated
+  and adapted to be both relevant to the field and well-suited for model evaluation.
+  The benchmark includes a robust methodology for evaluating models and reporting
+  aggregated results to enable a reliable assessment of progress.
+- [PhilEO Bench: Evaluating Geo-Spatial Foundation Models](https://arxiv.org/abs/2401.04464) - Propose a framework
+   consisting of a testbed and a novel 400 GB Sentinel-2 dataset containing
+   labels for three downstream tasks, building density estimation,
+   road segmentation, and land cover classification.
+- Duderstadt, Helm and Priebe (2024) propose a methodology for directly comparing
+  the embedding space geometry of FMs, which facilitates model comparison without
+  the need for an explicit evaluation metric. 
 - Geospatial Explainable AI (XAI) - Increase the accuracy and transparency of AI models and to
 make their results interpretable. The benchmark contains separate tasks that allows the
 user to test a FM’s properties in the embedding space, and demonstrate whether
@@ -187,6 +217,12 @@ enabling the processing of data for foundation models.
 - Fine-tuning and interpreting FMs for Earth science applications
     requires significant domain knowledge to ensure scientific validity and meaningful results.
 
+The future of FMs lies in their continued evolution toward more integrated
+data-driven modeling approaches, offering a more comprehensive understanding of Earth’s complex systems. This
+progression promises to provide critical insights into pressing global issues, such as climate change, natural hazards, and sustainability, ultimately transforming our approach
+to Earth system science and informing decision making in the face of global environmental challenges
+(Zhang, 2024).
+
 ## Reference
 - Bommasani, R., Hudson, D.A., Adeli, E., Altman, R., Arora, S., Arx, S.,
    Bernstein, M.S., Bohg, J., Bosselut, A., Brunskill, E., et al.
@@ -198,10 +234,18 @@ enabling the processing of data for foundation models.
    [https://doi.org/10.1111/exsy.13654]( https://doi.org/10.1111/exsy.13654)
 - Zhu X. X., Xiong Z., Wang Y., Stewart A. J. et al. On the Foundations of Earth and Climate Foundation Models.
    CoRR abs/2405.04285 (2024)
-   [https://doi.org/10.48550/arXiv.2405.04285](https://doi.org/10.48550/arXiv.2405.04285)
+   [https://doi.org/10.48550/arXiv.2405.04285](https://doi.org/10.48550/arXiv.2405.04285).
 - Sun X., ten Brink T., Carande W. et al., Towards practical artificial intelligence in Earth sciences,
    _Comput Geosci_ __28__, 1305–1329 (2024).
-   [https://doi.org/10.1007/s10596-024-10317-7](https://doi.org/10.1007/s10596-024-10317-7)
+   [https://doi.org/10.1007/s10596-024-10317-7](https://doi.org/10.1007/s10596-024-10317-7).
+- Duderstadt B., Helm H. S. and Priebe C. E.,
+   Comparing Foundation Models using Data Kernels,
+   arXiv:2305.05126v3 (2024)
+   [https://doi.org/10.48550/arXiv.2305.05126](https://doi.org/10.48550/arXiv.2305.05126).
+- Zhang H.  et al.,
+    When Geoscience Meets Foundation Models: Toward a general geoscience artificial intelligence system,
+    _IEEE Geoscience and Remote Sensing Magazine_,
+    [https://ieeexplore.ieee.org/document/10770814](10.1109/MGRS.2024.3496478).
 - Bodnar, C., Bruinsma, W.P., Lucic, A. et al. A foundation model for the Earth system.
    _Nature_ __641__, 1180–1187 (2025).
    [https://doi.org/10.1038/s41586-025-09005-y](https://doi.org/10.1038/s41586-025-09005-y)
