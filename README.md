@@ -53,7 +53,8 @@ FMs are trained on extensive, diverse, and frequently multimodal datasets,
 enabling them to generalize effectively across various tasks, regions, and sensors.
 In the context of Earth Science, FMs are often multimodal, having been trained 
 on satellite imagery, radar data, topography, weather, and even text-based reports.
-They are meant to automatically capture complex patterns and inherent features from data.
+They learn the underlying patterns and characteristics of the input data,
+and are meant to automatically capture complex patterns and inherent features from data.
 They have enormous potential in advancing Earth and climate sciences.
 They can be used to streamline the processing of Earth's vast data, reduce the 
 complexity of forecastings models while improving their prediction accuracy and 
@@ -175,6 +176,7 @@ Here are some evaluation tools:
   protocol that incorporates a wide-ranging selection of datasets, tasks,
   resolutions, and sensor types, establishing a robust and widely applicable
   benchmark for Geospatial FMs.
+- [Awesome Remote Sensing Foundation Models](https://github.com/Jack-bo1220/Awesome-Remote-Sensing-Foundation-Models) - A collection of papers, datasets, benchmarks, code, and pre-trained weights for Remote Sensing Foundation Models (RSFMs).
 - [GEO-Bench](https://proceedings.neurips.cc/paper_files/paper/2023/file/a0644215d9cff6646fa334dfa5d29c5a-Paper-Datasets_and_Benchmarks.pdf) - Propose a benchmark comprised of
   six classification and six segmentation tasks, which were carefully curated
   and adapted to be both relevant to the field and well-suited for model evaluation.
