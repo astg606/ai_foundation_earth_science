@@ -216,9 +216,10 @@ enabling the processing of data for foundation models.
 - Prithvi (name derived from the Sanskrit word for Earth) is a transformer-based geospatial FM pre-trained on more than 1TB of multispectral satellite imagery from the Harmonized Landsat-Sentinel 2 (HLS) dataset (Jakubik, 2023).
    - Prithvi was shown to perfom well on on fine-tuning tasks in areas ranging from multi-temporal cloud gap imputation, flood mapping, wildfire scar segmentation, and multi-temporal crop segmentation.
 - In the Fall of 2024, NASA and IBM released Prithvi-weather-climate (Prithvi-WxC), a weather and climate foundation model (FM) pre-trained on Modern-Era Retrospective analysis for Research and Applications, Version 2 (MERRA-2) data from NASA's Global Modeling and Assimilation Office to replicate atmospheric dynamics while being capable of dealing with missing information (Schmude, 2024, Koehl, 2024).
-- Prithvi-WxC features a flexible architecture, a scalable, hierarchical attention mechanism, and task-independent pretraining. It has 320 million (M) parameters, 220 M as encoder and 100 M as decoder. It implements a hierarchical two-dimensional vision transformer architecture that scales to large token counts.
-- Prithvi-WxC facilitates reseach works in areas such as etecting and predicting severe weather and natural disasters, creating targeted forecasts from localized observations, enhancing global climate simulations down to regional levels, and improving the representation of physical processes in weather and climate models.
-- 
+    - Prithvi WxC employs an encoder-decoder-based architecture, incorporating concepts from various recent transformer models to effectively capture both regional and global dependencies in the input data.
+    - It is a 2.3 billion parameter model trained on 160 different variables from MERRA-2 data (on 40 years of data). 
+    - Prithvi-WxC facilitates reseach works in areas such as etecting and predicting severe weather and natural disasters, creating targeted forecasts from localized observations, enhancing global climate simulations down to regional levels, and improving the representation of physical processes in weather and climate models.
+    - Finetuning Prithvi WxC demonstrates that large, transformer-based FMs can effectively learn mesoscale atmospheric evolution. This advance helps to streamline, enhance, and accelerate the development of physical parameterizations in climate models, which in turn improves prediction accuracy on interannual timescales.
 
 ## Things to consider
 
