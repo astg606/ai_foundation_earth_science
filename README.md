@@ -225,7 +225,8 @@ enabling the processing of data for foundation models.
 
 ![fig_prithvi](https://github.com/NASA-IMPACT/Prithvi-WxC/blob/main/docs/arch_main.png)
 
-![fig_prithvi](https://lh7-rt.googleusercontent.com/docsz/AD_4nXd7FvjSMVgjOwJknztadWkv0oV7AbfMGzUrs11MfwZe0464G-RRjIwLgAV8hx4-HXBLwAAfCeY9yjoqXg3r30iqwqqwL88EZxXHyUGuo8ODyH-knQJztMwrjLpRn-Wm2tdDAebX2PwzZZh7BzScE9mmJ0b3?key=owyMjUsgpvj2GR5EftcrJA)
+Figure 2: _Prithvi WxC simplified core architecture and masking scheme._ 
+
 
 ## Things to consider
 
