@@ -1,5 +1,4 @@
 # AI Foundation Models in Earth Science
-## Python Frameworks Needed
 
 ### Introduction
 
@@ -212,6 +211,14 @@ They offer extensive functionalities for neural networks, optimization, and GPU 
 (e.g., climate model outputs, remote sensing data) without the requirement of the entire dataset to fit into memory. They provide efficient data structures and parallel computing capabilities, 
 enabling the processing of data for foundation models.
 
+## Prithvi-WxC Foundation model
+
+- Prithvi (name derived from the Sanskrit word for Earth) is a transformer-based geospatial FM pre-trained on more than 1TB of multispectral satellite imagery from the Harmonized Landsat-Sentinel 2 (HLS) dataset (Jakubik, 2023).
+   - Prithvi was shown to perfom well on on fine-tuning tasks in areas ranging from multi-temporal cloud gap imputation, flood mapping, wildfire scar segmentation, and multi-temporal crop segmentation.
+- In the Fall of 2024, NASA and IBM released Prithvi-weather-climate (Prithvi-WxC), a weather and climate foundation model (FM) pre-trained on Modern-Era Retrospective analysis for Research and Applications, Version 2 (MERRA-2) data from NASA's Global Modeling and Assimilation Office to replicate atmospheric dynamics while being capable of dealing with missing information (Schmude, 2024, Koehl, 2024).
+- Prithvi-WxC features a flexible architecture, a scalable, hierarchical attention mechanism, and task-independent pretraining. It has 320 million (M) parameters, 220 M as encoder and 100 M as decoder. It implements a hierarchical two-dimensional vision transformer architecture that scales to large token counts.
+- Prithvi-WxC facilitates reseach works in areas such as etecting and predicting severe weather and natural disasters, creating targeted forecasts from localized observations, enhancing global climate simulations down to regional levels, and improving the representation of physical processes in weather and climate models.
+- 
 
 ## Things to consider
 
@@ -253,10 +260,20 @@ to Earth system science and informing decision making in the face of global envi
    _Nature_ __641__, 1180–1187 (2025).
    [https://doi.org/10.1038/s41586-025-09005-y](https://doi.org/10.1038/s41586-025-09005-y)
 - [PANGAEA: A Global and Inclusive Benchmark for Geospatial Foundation Models](https://github.com/VMarsocci/pangaea-bench)
-- Alemohammad, H., Khallaghi, S., Godwin, D., Balogun, R., Roy, S., and Ramachandran, R.,
+- Alemohamma, H., Khallaghi S., Godwin D., Balogun R., Roy S., and Ramachandran R.,
    An Explainable AI (XAI) Benchmark for Geospatial Foundation Models,
    EGU General Assembly 2025, Vienna, Austria, 27 Apr–2 May 2025, EGU25-3302, (2025)
   [https://doi.org/10.5194/egusphere-egu25-3302](https://doi.org/10.5194/egusphere-egu25-3302)
 - Myren S. and Parikh Nidhu,
    Towards Foundation Models: Evaluation of Geoscience Artificial Intelligence with Uncertainty,
    [https://arxiv.org/html/2501.14809v1](https://arxiv.org/html/2501.14809v1)
+- Jakubik J., Roy S., Phillips C. E. et al.,
+    Foundation Models for Generalist Geospatial Artificial Intelligence,
+    arXiv:2310.18660v2 (2023)
+    [https://doi.org/10.48550/arXiv.2310.18660](https://doi.org/10.48550/arXiv.2310.18660).
+- Schmude J., Roy S., Trojak  W. et al.,
+   Prithvi WxC: Foundation Model forWeather and Climate,
+   arXiv:2409.13598 (2024)
+   [https://doi.org/10.48550/arXiv.2409.13598](https://doi.org/10.48550/arXiv.2409.13598)
+- Koehl D., Prithvi-weather-climate: Advancing Our Understanding of the Atmosphere, [Earthdata Blog](https://www.earthdata.nasa.gov/news/blog/prithvi-weather-climate-advancing-our-understanding-atmosphere),
+    (2024).
