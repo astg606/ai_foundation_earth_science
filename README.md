@@ -223,6 +223,8 @@ enabling the processing of data for foundation models.
     - Prithvi-WxC facilitates reseach works in areas such as etecting and predicting severe weather and natural disasters, creating targeted forecasts from localized observations, enhancing global climate simulations down to regional levels, and improving the representation of physical processes in weather and climate models.
     - Finetuning Prithvi WxC demonstrates that large, transformer-based FMs can effectively learn mesoscale atmospheric evolution. This advance helps to streamline, enhance, and accelerate the development of physical parameterizations in climate models, which in turn improves prediction accuracy on interannual timescales.
 
+![fig_prithvi](https://github.com/NASA-IMPACT/Prithvi-WxC/blob/main/docs/arch_main.png)
+
 ![fig_prithvi](https://lh7-rt.googleusercontent.com/docsz/AD_4nXd7FvjSMVgjOwJknztadWkv0oV7AbfMGzUrs11MfwZe0464G-RRjIwLgAV8hx4-HXBLwAAfCeY9yjoqXg3r30iqwqqwL88EZxXHyUGuo8ODyH-knQJztMwrjLpRn-Wm2tdDAebX2PwzZZh7BzScE9mmJ0b3?key=owyMjUsgpvj2GR5EftcrJA)
 
 ## Things to consider
