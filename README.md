@@ -232,12 +232,16 @@ aiding in pre-training.
  
 ### Prithvi WxC
 - In the Fall of 2024, NASA and IBM released Prithvi-weather-climate (Prithvi-WxC), a weather and climate foundation model (FM) pre-trained on Modern-Era Retrospective analysis for Research and Applications, Version 2 (MERRA-2) data from NASA's Global Modeling and Assimilation Office to replicate atmospheric dynamics while being capable of dealing with missing information (Schmude, 2024, Koehl, 2024).
-    - Prithvi WxC employs an encoder-decoder-based architecture, incorporating concepts from various recent transformer models to effectively capture both regional and global dependencies in the input data.
-    - It is a 2.3 billion parameter model trained on 160 different variables from MERRA-2 data (on 40 years of data).
-       - The variables considered are 2 consecutive time records of 20 surface parameters and 10 multi-level variables (on 14 levels: 985 hPa, 970 hPa, 925 hPa, 850 hPa, 700 hPa, 600 hPa, 525 hPa, 412 hPa, 288 hPa,
+- Prithvi WxC employs an encoder-decoder-based architecture, incorporating concepts from various recent transformer models to effectively capture both regional and global dependencies in the input data.
+- Using a transformer model facilitates handling long-range dependencies in the data, making it possible to model complex atmospheric interactions at various scales, from local to global.
+- It is a 2.3 billion parameter model trained on 160 different variables from MERRA-2 data (on 40 years of data).
+  - The variables considered are 2 consecutive time records of 20 surface parameters and 10 multi-level variables (on 14 levels: 985 hPa, 970 hPa, 925 hPa, 850 hPa, 700 hPa, 600 hPa, 525 hPa, 412 hPa, 288 hPa,
 245 hPa, 208 hPa, 150 hPa, 109 hPa, and 48 hPa).
-    - Prithvi-WxC facilitates reseach works in areas such as etecting and predicting severe weather and natural disasters, creating targeted forecasts from localized observations, enhancing global climate simulations down to regional levels, and improving the representation of physical processes in weather and climate models.
-    - Finetuning Prithvi WxC demonstrates that large, transformer-based FMs can effectively learn mesoscale atmospheric evolution. This advance helps to streamline, enhance, and accelerate the development of physical parameterizations in climate models, which in turn improves prediction accuracy on interannual timescales.
+- Prithvi-WxC facilitates research works in areas such as etecting and predicting severe weather and natural disasters, creating targeted forecasts from localized observations, enhancing global climate simulations down to regional levels, and improving the representation of physical processes in weather and climate models.
+- Finetuning Prithvi WxC demonstrates that large, transformer-based FMs can effectively learn mesoscale atmospheric evolution. This advance helps to streamline, enhance, and accelerate the development of physical parameterizations in climate models, which in turn improves prediction accuracy on interannual timescales.
+- The latent encoder-decoder space of Prithvi WxC foundation model captures a comprehensive understanding of atmospheric evolution by training on vast amounts of data, including winds, temperature, humidity, radiation, and soil moisture.
+- These pretrained encoders can be used to develop more precise data-driven models of atmospheric
+processes.
 
 ![fig_prithvi](https://github.com/NASA-IMPACT/Prithvi-WxC/blob/main/docs/arch_main.png)
 
