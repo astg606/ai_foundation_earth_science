@@ -213,8 +213,24 @@ enabling the processing of data for foundation models.
 
 ## Prithvi-WxC Foundation model
 
-- Prithvi (name derived from the Sanskrit word for Earth) is a transformer-based geospatial FM pre-trained on more than 1TB of multispectral satellite imagery from the Harmonized Landsat-Sentinel 2 (HLS) dataset (Jakubik, 2023).
-   - Prithvi was shown to perfom well on on fine-tuning tasks in areas ranging from multi-temporal cloud gap imputation, flood mapping, wildfire scar segmentation, and multi-temporal crop segmentation.
+### Prithvi-EO
+- IBM and NASA collbarated to create Prithvi (name derived from the Sanskrit word for Earth),  a transformer-based geospatial FM pre-trained on more than 1TB of multispectral satellite imagery from the Harmonized Landsat-Sentinel 2 (HLS) dataset (Jakubik, 2023, Szwarcman, 2024).
+- The pretraining of Prithvi is based on the masked autoencoder (MAE) approach, a successful self-supervised learning method widely used and extended for different data types, including video and multi-spectral images.
+   - MAE is designed to reconstruct original signals from partial observations.
+   - MAE divides images into non-overlapping patches, randomly sampling some and masking others to reduce redundancy.
+   - Its encoder, based on the Vision Transformer (ViT) model, processes only visible patches, optimizing computational efficiency. The decoder reconstructs images using encoded visible patches and mask tokens, primarily
+aiding in pre-training.
+   - The reconstruction process predicts pixel values for masked patches, with the difference between original and reconstructed images measured using Mean Squared Error (MSE).
+- Prithvi-EO-1.0 integrates infrared bands alongside standard RGB channels, specifically using six spectral bands from NASA’s Harmonized Landsat and Sentinel-2 (HLS) data: Blue, Green, Red, Narrow NIR, SWIR 1, and SWIR 2.
+- Prithvi's advanced architecture allows it to perform comprehensive analyses of Earth’s surface changes over time. Its pretraining on a globally consistent and temporally rich dataset allows it to learn robust representations that are transferable to diverse geographical locations and environmental conditions.
+- Prithvi-EO was shown to perfom well on on fine-tuning tasks in areas ranging from multi-temporal cloud gap imputation, flood mapping, wildfire scar segmentation, and multi-temporal crop segmentation.
+
+![fig_prithvi](https://www.esri.com/arcgis-blog/wp-content/uploads/2025/04/prthvi_eo_1.png)
+
+ Figure 2: _The masked autoencoder (MAE) structure for pre-training Prithvi on large-scale multi-temporal and multi-spectral satellite images._
+
+ 
+### Prithvi WxC
 - In the Fall of 2024, NASA and IBM released Prithvi-weather-climate (Prithvi-WxC), a weather and climate foundation model (FM) pre-trained on Modern-Era Retrospective analysis for Research and Applications, Version 2 (MERRA-2) data from NASA's Global Modeling and Assimilation Office to replicate atmospheric dynamics while being capable of dealing with missing information (Schmude, 2024, Koehl, 2024).
     - Prithvi WxC employs an encoder-decoder-based architecture, incorporating concepts from various recent transformer models to effectively capture both regional and global dependencies in the input data.
     - It is a 2.3 billion parameter model trained on 160 different variables from MERRA-2 data (on 40 years of data).
@@ -225,7 +241,7 @@ enabling the processing of data for foundation models.
 
 ![fig_prithvi](https://github.com/NASA-IMPACT/Prithvi-WxC/blob/main/docs/arch_main.png)
 
-Figure 2: _Prithvi WxC simplified core architecture and masking scheme._ 
+Figure 3: _Prithvi WxC simplified core architecture and masking scheme._ 
 
 
 ## Things to consider
@@ -275,9 +291,12 @@ to Earth system science and informing decision making in the face of global envi
 - Myren S. and Parikh Nidhu,
    Towards Foundation Models: Evaluation of Geoscience Artificial Intelligence with Uncertainty,
    [https://arxiv.org/html/2501.14809v1](https://arxiv.org/html/2501.14809v1)
-- Jakubik J., Roy S., Phillips C. E. et al.,
+- Szwarcman D., Roy S., Fraccaro P., Gíslason Þ. E., Blumenstiel B., et al.,
+    Prithvi-EO-2.0: A Versatile Multi-Temporal Foundation Model for Earth Observation Applications,
+    arXiv preprint arXiv:2412.02732 (2024)
+- Schmude J, Roy S., Trojak W., et al.,
     Foundation Models for Generalist Geospatial Artificial Intelligence,
-    arXiv:2310.18660v2 (2023)
+    arXiv.2310.18660 (2023)
     [https://doi.org/10.48550/arXiv.2310.18660](https://doi.org/10.48550/arXiv.2310.18660).
 - Schmude J., Roy S., Trojak  W. et al.,
    Prithvi WxC: Foundation Model forWeather and Climate,
