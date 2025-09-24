@@ -1,6 +1,6 @@
 # AI Foundation Models in Earth Science
 
-### Introduction
+## Introduction
 
 NASA has the world’s largest collection of Earth observation data. 
 More datasets are becoming available with varying resolutions,
@@ -158,6 +158,36 @@ applicable to FMs:
 In addtion to the above considerations, we need to ensure that FMs are scientifically validated and their results are reproducible to support reliable and trustworthy Earth Science research. 
 A possible step towards trustworthyness is to develop explainable AI (models capable of generating decisions that a human could understand and interpret).
 
+## Sample applications of FMs in Earth Science
+
+__Earth Monitoring__ 
+- FMs assist in monitoring changes on the planet, such as tracking wildfires, ice melting, floods, and vegetation growth. They can automatically detect and remove clouds from satellite images.
+ 
+__Climate & Weather Forecasting__
+- FMs enable high-resolution weather forecasting, ocean wave prediction, and analysis of climate events and patterns.
+  
+__Agriculture & Urban Planning__
+- FMs support use cases in high-precision agriculture, urban, and regional planning by helping analyze land use patterns.
+   They are used to detect drought stress or disease outbreaks,
+   canopy loss in near real-time across large forested areas, to identify damaged buildings and roads,
+   to detect unplanned urban sprawl,.
+
+__Data Quality Control__
+- FMs can automate processes like identifying and removing low-quality satellite images, ensuring a higher quality dataset for monitoring. 
+
+Some notable FMs include:
+- Aurora (Bodnar C., Bruinsma W.P., Lucic A. et al., 2025):
+   large-scale foundation model trained on more than one million hours of diverse geophysical data.
+   It produces forecasts for any collection of Earth system variables at any desired resolution.
+   The model consists of three parts:
+   (1) an encoder that converts heterogeneous inputs into a universal latent three-dimensional (3D) representation;
+   (2) a processor that evolves the representation forward in time; and
+   (3) a decoder that translates the standard 3D representation back into physical predictions.
+- Prithvi WxC (Schmude J., Roy S., Trojak  W. et al., 2024): Described below.
+- SatVision-TOA (Spradlin et al., 2024):
+   A foundation model pre-trained on 14-band MODIS Top-Of-Atmosphere radiance imagery,
+   designed for coarse-resolution, all-sky remote sensing data.
+   It can be applied for 3D cloud retrieval and atmospheric monitoring.
 
 ### Evaluation tools
 
@@ -193,23 +223,6 @@ make their results interpretable. The benchmark contains separate tasks that all
 user to test a FM’s properties in the embedding space, and demonstrate whether
 the model has learned spectral, spatial and temporal features (Alemohammad et al., 2025).
 
-
-## Python tools needed to use FMs
-
-### Frameworks
-
-- __TensorFlow__: An open-source deep learning framework developed by Google.
-   It's renowned for its flexibility and scalability, making it suitable for many AI applications. 
-- __PyTorch__: An open-source machine learning library known for its dynamic computational graph.
-   The framework is excellent for prototyping and experimentation. 
- 
-They offer extensive functionalities for neural networks, optimization, and GPU acceleration.
-
-### Reading data
-
-- __Xarray/Dask__: Crucial for handling large, multi-dimensional Earth science datasets 
-(e.g., climate model outputs, remote sensing data) without the requirement of the entire dataset to fit into memory. They provide efficient data structures and parallel computing capabilities, 
-enabling the processing of data for foundation models.
 
 ## Prithvi-WxC Foundation model
 
@@ -247,6 +260,22 @@ processes.
 
 Figure 3: _Prithvi WxC simplified core architecture and masking scheme._ 
 
+## Python tools needed to use FMs
+
+### Frameworks
+
+- __TensorFlow__: An open-source deep learning framework developed by Google.
+   It's renowned for its flexibility and scalability, making it suitable for many AI applications. 
+- __PyTorch__: An open-source machine learning library known for its dynamic computational graph.
+   The framework is excellent for prototyping and experimentation. 
+ 
+They offer extensive functionalities for neural networks, optimization, and GPU acceleration.
+
+### Reading data
+
+- __Xarray/Dask__: Crucial for handling large, multi-dimensional Earth science datasets 
+(e.g., climate model outputs, remote sensing data) without the requirement of the entire dataset to fit into memory. They provide efficient data structures and parallel computing capabilities, 
+enabling the processing of data for foundation models.
 
 ## Things to consider
 
@@ -308,3 +337,11 @@ to Earth system science and informing decision making in the face of global envi
    [https://doi.org/10.48550/arXiv.2409.13598](https://doi.org/10.48550/arXiv.2409.13598)
 - Koehl D., Prithvi-weather-climate: Advancing Our Understanding of the Atmosphere, [Earthdata Blog](https://www.earthdata.nasa.gov/news/blog/prithvi-weather-climate-advancing-our-understanding-atmosphere),
     (2024).
+- Bodnar C., Bruinsma W.P., Lucic A. et al.,
+   A foundation model for the Earth system,
+   Nature __641__, 1180–1187 (2025).
+   [https://doi.org/10.1038/s41586-025-09005-y](https://doi.org/10.1038/s41586-025-09005-y)
+- Spradlin C. S., Caraballo-Vega J. A., Li J., Carroll M. L., Gong J. and Montesano P. M.,
+   SatVision-TOA: A Geospatial Foundation Model for Coarse-Resolution All-Sky Remote Sensing Imagery,
+   arXiv:2411.17000v1 (2024)
+   [https://doi.org/10.48550/arXiv.2411.17000](https://doi.org/10.48550/arXiv.2411.17000). 
