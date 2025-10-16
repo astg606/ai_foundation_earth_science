@@ -108,10 +108,10 @@ are interdependent.
 
 AI-enhanced physics models, achieved through the creation
 of hybrid physics-AI models involve the incorporation of AI
-models into existing physics models. AI models can
+models into existing physics models. __AI models can
 replace one or more components of a physics-based model
 or predict intermediate quantities that are inadequately 
-represented by physics alone (Sun, 2024).
+represented by physics alone__ (Sun, 2024).
 
 
 A very possible situation may be that AI models will rely on 
@@ -259,6 +259,8 @@ processes.
 ![fig_prithvi](https://github.com/NASA-IMPACT/Prithvi-WxC/blob/main/docs/arch_main.png)
 
 Figure 3: _Prithvi WxC simplified core architecture and masking scheme._ 
+
+Prithvi-WxC takes the state of the atmosphere at times $t$ and $t-\delta t$ to predict the state at $t+\delta t$.
 
 ## Python tools needed to use FMs
 
