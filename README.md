@@ -248,8 +248,26 @@ aiding in pre-training.
 - Prithvi WxC employs an encoder-decoder-based architecture, incorporating concepts from various recent transformer models to effectively capture both regional and global dependencies in the input data.
 - Using a transformer model facilitates handling long-range dependencies in the data, making it possible to model complex atmospheric interactions at various scales, from local to global.
 - It is a 2.3 billion parameter model trained on 160 different variables from MERRA-2 data (on 40 years of data).
-  - The variables considered are 2 consecutive time records of 20 surface parameters and 10 multi-level variables (on 14 levels: 985 hPa, 970 hPa, 925 hPa, 850 hPa, 700 hPa, 600 hPa, 525 hPa, 412 hPa, 288 hPa,
-245 hPa, 208 hPa, 150 hPa, 109 hPa, and 48 hPa).
+  - The variables considered are 2 consecutive time records of two sets:
+     - 20 surface parameters: near-surface wind components (U10, V10),
+        near-surface (2 meter) air temperature (T2M), skin temperature (TS),
+       surface roughness (Z0M), specific humidity (QV2M), surface pressure (PS), sea level pressure (SLP),
+       column-total ice, liquid water and water vapor (TQI, TQL, TQV),
+       longwave radiation emitted by the surface (LWGEM), longwave radiation absorbed by the surface (LWGAB),
+       upward longwave at the top of atmosphere (LWTUP),
+       net downward shortwave radiation at the surface (SWGNT) and
+       net shortwave at top of atmosphere (SWTNT).
+       There are also static (in time) surface variables that include
+       surface geopotential height (PHIS), land fraction (FRLAND), ocean fraction (FROCEAN),
+       and ice fraction (FRACI)
+     - 10 multi-level variables
+       (on 14 levels: 985 hPa, 970 hPa, 925 hPa, 850 hPa, 700 hPa, 600 hPa,
+       525 hPa, 412 hPa, 288 hPa, 245 hPa, 208 hPa, 150 hPa, 109 hPa, and 48 hPa):
+       wind components (U, V), vertical wind (ω), air temperature (T), specific humidity (QV),
+       actual mid-level pressure (PL), and mid-layer geopotential height (H),
+       cloud fraction (CLOUD), cloud massk fraction that is ice (QI) and water (QL).
+   - The training is done using data from 1980 to 2019 and the validation with data
+       from one of the years in the 2020-2023 range, depending on task.
 - Prithvi-WxC facilitates research works in areas such as etecting and predicting severe weather and natural disasters, creating targeted forecasts from localized observations, enhancing global climate simulations down to regional levels, and improving the representation of physical processes in weather and climate models.
 - Finetuning Prithvi WxC demonstrates that large, transformer-based FMs can effectively learn mesoscale atmospheric evolution. This advance helps to streamline, enhance, and accelerate the development of physical parameterizations in climate models, which in turn improves prediction accuracy on interannual timescales.
 - The latent encoder-decoder space of Prithvi WxC foundation model captures a comprehensive understanding of atmospheric evolution by training on vast amounts of data, including winds, temperature, humidity, radiation, and soil moisture.
@@ -260,7 +278,7 @@ processes.
 
 Figure 3: _Prithvi WxC simplified core architecture and masking scheme._ 
 
-Prithvi-WxC takes the state of the atmosphere at times $t$ and $t-\delta t$ to predict the state at $t+\delta t$.
+Using the Prithvi-WxC pretrained model, you can fine tune your model by taking the state of the atmosphere at times $t$ and $t-\delta t$ and predicting the state at $t+\delta t$.
 
 ## Python tools needed to use FMs
 
