@@ -280,6 +280,17 @@ Figure 3: _Prithvi WxC simplified core architecture and masking scheme._
 
 Using the Prithvi-WxC pretrained model, you can fine tune your model by taking the state of the atmosphere at times $t$ and $t-\delta t$ and predicting the state at $t+\delta t$.
 
+There are two Prithvi-WxC options:
+
+- `prithvi.wxc.2300m.v1`: Was pretrained with a 50% masking ratio.
+    The time delta between input timestamps is variable as is the forecast lead time.
+    During pretraining, the input delta was chosen from $\[-3, -6, -9, -12 \]$ hours
+    while the forecast lead time was chosen from $\[0, 6, 12, 24 \]$ hours.
+    This option is more appropriate for generic use cases that do not focus on forecasting.
+- `prithvi.wxc.rollout.2300m.v1`: Was optimzed for autoregressive rollout.
+    Here the input delta and the lead time are set to 6 hours.
+    This option is suitable for forecasting applications.
+
 ## Python tools needed to use FMs
 
 ### Frameworks
